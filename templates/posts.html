@@ -18,7 +18,7 @@
             <li>
                 <img class="menu_icon js-option-icon" src="{% static 'img/menu.png' %}">
                 <div class="menu">
-                    <a href="/delete/{{ post.id }}/">delete</a>
+                    <a href="/delete/{{ post.id }}/">delete</a> <br>
                     <a href="/edit/{{ post.id }}/">edit</a>
             </div>
                 <div class="logo">
@@ -29,7 +29,7 @@
                     <div class="datetime">{{ post.created_at}}</div>
                     <p>{{ post.body}}</p>
                     {% if post.image.url%}
-                    <img src='{{post.image.url}}' alt="img" height="250px" width="500px">
+                    <img src='{{post.image.url}}' alt="img" class="cloud_image">
                     {% endif %}
                     <div>
                         <a href="/likes/{{post.id}}/"> <img class="like" src="{% static 'img/like.png' %}" alt=""></a>
